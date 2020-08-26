@@ -1,0 +1,25 @@
+
+.home-page {
+  background-image: url("/images/93.png");
+  background-repeat: repeat;
+
+  &__posts {
+    display: flex;
+    flex-direction: row;
+    max-width: 1345px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+
+  }
+
+  &_post-container {
+    flex-direction: column;
+  }
+}
+
+.home-page .home-page__post {
+  max-height: 200px;
+}
+
+

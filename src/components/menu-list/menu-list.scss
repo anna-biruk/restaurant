@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
+
 .menu {
     &__list {
         min-height: 100vh;
@@ -6,5 +8,16 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
+    }
+
+}
+.menu-list{
+    &__title{
+        display: block;
+        margin: 0 auto;
+        width: 142px;
+        font-family: 'Londrina Solid', cursive;
+        color: white;
+        font-size: 40px;
     }
 }

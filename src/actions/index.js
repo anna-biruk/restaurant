@@ -26,10 +26,17 @@ const deleteFromCart = (id) => {
         payload: id
     }
 };
+const changeCategory = (category) => {
+    return {
+        type: 'CHANGE_CATEGORY',
+        payload: category
+    }
+};
 export {
     menuLoaded,
     menuRequested,
     menuError,
     addedToCart,
-    deleteFromCart
+    deleteFromCart,
+    changeCategory
 };

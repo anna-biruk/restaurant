@@ -1,0 +1,16 @@
+.slider-page {
+    display: block;
+    margin: 0 auto;
+    max-width: 1345px;
+
+&__image {
+     max-height: 350px;
+     width: 100%;
+ }
+
+
+}
+
+.home-page .react-slideshow-container .default-nav {
+    fill: dimgrey;
+}

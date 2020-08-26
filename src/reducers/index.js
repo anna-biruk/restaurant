@@ -1,5 +1,6 @@
 const initialState = {
     menu: [],
+    category: null,
     loading: false,
     error: false,
     items:[],
@@ -48,6 +49,7 @@ const reducer = (state = initialState, action) => {
                 }
 
             }
+
             const item = state.menu.find(item => item.id === id);
             const newItem = {
                 title: item.title,
@@ -76,8 +78,13 @@ const reducer = (state = initialState, action) => {
                     ...state.items.slice(itemIndex + 1)
                 ],
                 totalPrice: state.totalPrice - price
-            }
-
+            };
+        case 'CHANGE_CATEGORY':
+            return {
+                ...state,
+                category: action.payload,
+                loading: false
+            };
         default:
             return state;
 

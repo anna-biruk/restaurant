@@ -2,7 +2,6 @@ import React from 'react';
 import './cart-table.scss';
 import {connect} from "react-redux";
 import {deleteFromCart} from "../../actions";
-import WithRestoService from '../hoc';
 
 const CartTable = ({items, deleteFromCart, RestoService}) => {
     if (items.length === 0) {
@@ -17,7 +16,7 @@ const CartTable = ({items, deleteFromCart, RestoService}) => {
                         const {title, price, url, id, qtty} = item
                         return (
                             <div key={id} className="cart__item">
-                                <img src={url} className="cart__item-img" alt={title}></img>
+                                <img src={url} className="cart__item-img" alt={''} />
                                 <div className="cart__item-title">{title}</div>
                                 <div className="cart__item-price">{price}$ * {qtty}</div>
                                 <div onClick={() => {
@@ -49,9 +48,9 @@ const generateOrder = (items) => {
     });
     return newOrder;
 };
-const mapStateToProps = ({items}) => {
+const mapStateToProps = (state) => {
     return {
-        items
+        items: state.items,
     }
 };
 const mapDispatchToProps = {

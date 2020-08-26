@@ -3,9 +3,10 @@ import MenuListItem from '../menu-list-item';
 import {connect} from "react-redux";
 import './menu-list.scss';
 import WithRestoService from '../hoc/with-resto-service'
-import {menuLoaded, menuRequested, menuError, addedToCart} from "../../actions";
+import {addedToCart, menuError, menuLoaded, menuRequested} from "../../actions";
 import Spinner from '../spinner/spinner'
 import Error from '../error/error';
+import FilterCategory from "../filter-category";
 
 class MenuList extends Component {
     componentDidMount() {
@@ -20,7 +21,7 @@ class MenuList extends Component {
     }
 
     render() {
-        const {menuItems, loading, error, addedToCart} = this.props;
+        const {menuItems, loading, error, addedToCart, category} = this.props;
         if (loading) {
             return <Spinner/>
         }
@@ -29,19 +30,24 @@ class MenuList extends Component {
             console.error(error);
             return <Error/>
         }
+        const filterItems = menuItems.filter(item => category === null || category === item.category.toUpperCase())
 
         return (
-            <ul className="menu__list">
-                {menuItems.map(menuItem => {
-                    return <MenuListItem
-                        key={menuItem.id}
-                        menuItem={menuItem}
-                        onAddToCart={() => {
-                            addedToCart(menuItem.id)
-                        }}/>
-                })}
+            <div>
+                <div className='menu-list__title'>Our menu</div>
+                <FilterCategory/>
+                <ul className="menu__list">
+                    {filterItems.map(menuItem => {
+                        return <MenuListItem
+                            key={menuItem.id}
+                            menuItem={menuItem}
+                            onAddToCart={() => {
+                                addedToCart(menuItem.id)
+                            }}/>
+                    })}
 
-            </ul>
+                </ul>
+            </div>
         )
     }
 }
@@ -50,7 +56,8 @@ const mapStateToProps = (state) => {
     return {
         menuItems: state.menu,
         loading: state.loading,
-        error: state.error
+        error: state.error,
+        category: state.category
     }
 };
 const mapDispatchToProps = {
