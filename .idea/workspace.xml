@@ -4,8 +4,6 @@
     <list default="true" id="e9535f89-951f-4b37-bc92-0478f59b9fcb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/resto-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/resto-service.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,31 +58,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="119">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/devops/run_prod.sh">
+        <entry file="file://$PROJECT_DIR$/devops/build_prod.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/resto-service.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -133,6 +131,7 @@
       <find>reducer</find>
       <find>deleteFromCart</find>
       <find>/menu</find>
+      <find>url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +187,10 @@
         <option value="$PROJECT_DIR$/server/controllers/menuController.js" />
         <option value="$PROJECT_DIR$/server/services/menuService.js" />
         <option value="$PROJECT_DIR$/server/public/index.html" />
-        <option value="$PROJECT_DIR$/devops/run_prod.sh" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/src/services/resto-service.js" />
+        <option value="$PROJECT_DIR$/devops/run_prod.sh" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -221,6 +220,11 @@
             <path>
               <item name="react_redux_restarant" type="b2602c69:ProjectViewProjectNode" />
               <item name="react_redux_restarant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_redux_restarant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_redux_restarant" type="462c0819:PsiDirectoryNode" />
+              <item name="devops" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react_redux_restarant" type="b2602c69:ProjectViewProjectNode" />
@@ -324,7 +328,7 @@
       <workItem from="1593253534373" duration="49000" />
       <workItem from="1593253666545" duration="18955000" />
       <workItem from="1598180537127" duration="18853000" />
-      <workItem from="1598258372747" duration="43506000" />
+      <workItem from="1598258372747" duration="44251000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1593369056012</created>
@@ -354,11 +358,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598441884463</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed server port">
+      <created>1598442401298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598442401299</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed build script">
+      <created>1598442779619</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598442779619</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95283000" />
+    <option name="totallyTimeSpent" value="96028000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +441,9 @@
     <MESSAGE value="Deploy" />
     <MESSAGE value="Added static files" />
     <MESSAGE value="Removed yarn lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed yarn lock" />
+    <MESSAGE value="Fixed server port" />
+    <MESSAGE value="Fixed build script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed build script" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/pages/index.js">
@@ -739,27 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devops/run_prod.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/menuService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -778,6 +777,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devops/build_prod.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
