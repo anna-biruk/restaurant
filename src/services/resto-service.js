@@ -1,6 +1,5 @@
 export default class RestoService{
-    url = `${window.location.origin.replace('3001', '3000')}/api/menu`;
-    _apiBase = window.location.origin.replace('3001', '3000');
+    _apiBase = process.env.REACT_APP_API_BASE || window.location.origin.replace('3001', '3000');
 
    async getResource (url){
 

@@ -12,6 +12,6 @@ app.get('*',(req,res)=>{
     res.sendFile(path.resolve().replace('server', 'build/index.html'))
 });
 
-app.listen(3000, function() {
-    console.log('Running');
+app.listen(process.env.PORT ||3000, function() {
+    console.log(`Running on port ${process.env.PORT || 3000}`);
 });
