@@ -18,7 +18,7 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
-    "postinstall": "cd ./server && npm i",
+    "heroku-postbuild": "cd ./server && npm i",
     "start:dev": "react-scripts start",
     "start": "sh ./devops/build_prod.sh",
     "build": "react-scripts build",
