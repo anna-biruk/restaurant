@@ -31,7 +31,6 @@ class MenuList extends Component {
             return <Error/>
         }
         const filterItems = menuItems.filter(item => category === null || category === item.category.toUpperCase())
-
         return (
             <div>
                 <div className='menu-list__title'>Our menu</div>

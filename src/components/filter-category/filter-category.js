@@ -8,19 +8,21 @@ class FilterCategory extends Component {
 
     categories = [
         'BREAKFAST',
-        'LUNCH',
+        'MAIN DISHES',
         'SALADS',
-        'CAKES',
+        'DESSERTS',
         'DRINKS'
     ];
 
     render() {
+
 
         return (
             <div className='filter-container'>
                 {
                     this.categories.map((item) => {
                         return (
+
                             <button onClick={()=> this.props.changeCategory(item)} className={classNames('filter-container__item', {'filter-container__item_active':this.props.category === item})}>
                                 {item}
                             </button>
