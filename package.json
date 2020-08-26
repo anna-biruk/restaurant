@@ -18,8 +18,9 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
+    "install": "sh devops/build_prod.sh",
     "start:dev": "react-scripts start",
-    "start": "sh ./devops/run_prod.sh",
+    "start": "cd ./server && node index.js",
     "build": "react-scripts build",
     "server": "json-server ./src/db.json",
     "test": "react-scripts test",
