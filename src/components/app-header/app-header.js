@@ -8,7 +8,7 @@ const AppHeader = ({totalPrice}) => {
         <header className="header">
 
             <Link className='header__logo header__link' to='/'>
-                <img src='/images/logo.png' alt=""/>
+                <img src='/images/lol.png' alt=""/>
             </Link>
             <div className="header__link-container">
             <Link className="header__link"  to='/'>Home</Link>

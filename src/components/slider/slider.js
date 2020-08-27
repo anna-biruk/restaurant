@@ -5,11 +5,11 @@ import './slider.scss';
 export default class Slider extends Component{
     render() {
         const images = [
-            'images/salad.jpg',
-            'images/salad1.jpg',
-            'images/salad2.jpg',
-            'images/pizza2.jpg',
-            'images/steak.jpg'
+            'images/1 (2).jpg',
+            'images/3.jpg',
+            'images/3.jpeg',
+            'images/5.jpg',
+            'images/7.jpeg'
         ];
 
         return (
