@@ -32,11 +32,26 @@ const changeCategory = (category) => {
         payload: category
     }
 };
+const onIncreaseQuantityClicked=(id)=>{
+    return{
+        type:'INCREASE_QUANTITY',
+        payload:id
+    }
+};
+
+const onDecreaseQuantityClicked=(id)=>{
+    return{
+        type: 'DECREASE_QUANTITY',
+        payload:id
+    }
+}
 export {
     menuLoaded,
     menuRequested,
     menuError,
     addedToCart,
     deleteFromCart,
-    changeCategory
+    changeCategory,
+    onDecreaseQuantityClicked,
+    onIncreaseQuantityClicked
 };

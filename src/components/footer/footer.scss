@@ -1,0 +1,28 @@
+.footer-container{
+  background-color:rgb(240,240,240);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: 115px;
+}
+.footer {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+  &__title {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  &__follow {
+    margin-left: auto;
+    cursor: default;
+  }
+
+  &__icon {
+    color: #626262;
+    margin-left: 17px;
+
+  }
+}

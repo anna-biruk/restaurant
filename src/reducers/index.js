@@ -85,9 +85,45 @@ const reducer = (state = initialState, action) => {
                 category: action.payload,
                 loading: false
             };
+        case 'INCREASE_QUANTITY':
+            let fullPrice = 0;
+            const newItems = state.items.map(item => {
+                if (item.id === action.payload) {
+                    return {...item, qtty: item.qtty + 1}
+                }
+                return item;
+            });
+            newItems.forEach(item => {
+                fullPrice += item.price * item.qtty;
+
+            })
+            return {
+                ...state,
+                items: newItems,
+                totalPrice: fullPrice
+            };
+        case 'DECREASE_QUANTITY':
+            let newFullPrice = 0;
+            const updatedItems = state.items.map(item => {
+                if (item.id === action.payload) {
+                    return {...item, qtty: item.qtty - 1}
+                }
+                return item;
+            });
+            updatedItems.forEach(item => {
+                    newFullPrice += item.price * item.qtty;
+            });
+            return {
+                ...state,
+                items: updatedItems,
+                totalPrice: newFullPrice
+            };
+
+
         default:
             return state;
 
     }
+
 };
 export default reducer;

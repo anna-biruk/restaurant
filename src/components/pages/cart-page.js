@@ -5,7 +5,7 @@ import AppHeader from "../app-header";
 const CartPage = () => {
     return (
         <div className="cart">
-            <AppHeader total={50}/>
+            <AppHeader/>
 
             <CartTable/>
         </div>

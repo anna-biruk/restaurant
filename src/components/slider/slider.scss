@@ -1,15 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Kaushan+Script&display=swap');
+
 .slider-page {
+    position: relative;
     display: block;
     max-width: 1350px;
-  margin: 0 auto;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
 
 
-&__image {
+  &__image {
      max-height: 100vh;
      width: 100%;
-  object-fit: cover;
- }
+     object-fit: cover;
+     background: rgba(0, 0, 0, 0.3);
 
+  }
+
+  &__title {
+    position: absolute;
+    top: 300px;
+    color: black;
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    left: 490px;
+
+  }
 
 }
 

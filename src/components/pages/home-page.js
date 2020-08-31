@@ -3,6 +3,9 @@ import './home-page.scss'
 import Slider from '../slider'
 import Post from '../post';
 import AppHeader from "../app-header";
+import About from "../about";
+import Footer from "../footer";
+import Map from "../map";
 
 export default class HomePage extends Component {
 
@@ -22,7 +25,13 @@ export default class HomePage extends Component {
                         <Post className="home-page__post" img='menu/main dishes/1.jpg' alt='img' title='Grilled beef tenderloin' content='LoremIpsum'/>
                     </div>
                 </div>
-
+                <div className="home-page__about">
+                    <About/>
+                </div>
+                <Map />
+                <div className="footer-container">
+                    <Footer/>
+                </div>
             </div>
         )
     }
