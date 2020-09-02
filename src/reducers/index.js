@@ -4,7 +4,9 @@ const initialState = {
     loading: false,
     error: false,
     items:[],
-    totalPrice: 0
+    totalPrice: 0,
+    order:null
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -96,7 +98,7 @@ const reducer = (state = initialState, action) => {
             newItems.forEach(item => {
                 fullPrice += item.price * item.qtty;
 
-            })
+            });
             return {
                 ...state,
                 items: newItems,
@@ -117,6 +119,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 items: updatedItems,
                 totalPrice: newFullPrice
+            };
+        case "SAVE_ORDER":
+            return {
+                ...state,
+                order:action.payload
             };
 
 

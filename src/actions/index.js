@@ -44,7 +44,13 @@ const onDecreaseQuantityClicked=(id)=>{
         type: 'DECREASE_QUANTITY',
         payload:id
     }
-}
+};
+const saveOrder=(data)=>{
+    return{
+        type:"SAVE_ORDER",
+        payload:data
+    }
+};
 export {
     menuLoaded,
     menuRequested,
@@ -53,5 +59,6 @@ export {
     deleteFromCart,
     changeCategory,
     onDecreaseQuantityClicked,
-    onIncreaseQuantityClicked
+    onIncreaseQuantityClicked,
+    saveOrder
 };

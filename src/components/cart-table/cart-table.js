@@ -1,10 +1,11 @@
 import React from 'react';
 import './cart-table.scss';
 import {connect} from "react-redux";
-import {deleteFromCart,onIncreaseQuantityClicked,onDecreaseQuantityClicked} from "../../actions";
+import {deleteFromCart, onDecreaseQuantityClicked, onIncreaseQuantityClicked} from "../../actions";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // eslint-disable-next-line no-unused-vars
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom";
 
 const CartTable = ({items, deleteFromCart, RestoService, onIncreaseQuantityClicked,onDecreaseQuantityClicked}) => {
     if (items.length === 0) {
@@ -41,10 +42,12 @@ const CartTable = ({items, deleteFromCart, RestoService, onIncreaseQuantityClick
                 }
 
             </div>
-            <button onClick={() => {
-                RestoService.setOrder(generateOrder(items))
+            <Link to='/order'>
+                <button onClick={() => {
+               // RestoService.setOrder(generateOrder(items))
             }} className="order">Order
-            </button>
+                </button>
+            </Link>
 
         </>
     );
