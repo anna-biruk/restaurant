@@ -7,33 +7,34 @@ import About from "../about";
 import Footer from "../footer";
 import Map from "../map";
 
-export default class HomePage extends Component {
+        export default class HomePage extends Component {
+            render() {
+                return (
+                    <div className="home-page"  >
+                       <div className="home-page__header">
+                           <AppHeader total={50}/>
+                       </div>
 
-    render() {
-        return (
-            <div className="home-page"  >
-               <div className="home-page__header">
-                   <AppHeader total={50}/>
-               </div>
+                        <Slider/>
 
-                <Slider/>
-
-                <div className='home-page__posts'>
-                    <Post img='images/chick.jpg' alt='img' title='Chicken' content='LoremIpsum'/>
-                    <div className='home-page_post-container'>
-                        <Post className="home-page__post" img='menu/salads/6.jpg' alt='img' title='Cesar Salad' content=''/>
-                        <Post className="home-page__post" img='menu/main dishes/1.jpg' alt='img' title='Grilled beef tenderloin' content='LoremIpsum'/>
+                        <div className='home-page__posts'>
+                            <Post img='images/chick.jpg' alt='img' title='Chicken' content='LoremIpsum'/>
+                            <div className='home-page_post-container'>
+                                <Post className="home-page__post" img='menu/salads/6.jpg' alt='img'
+                                      title='Cesar Salad' content=''/>
+                                <Post className="home-page__post" img='menu/main dishes/1.jpg' alt='img'
+                                      title='Grilled beef tenderloin' content='LoremIpsum'/>
+                            </div>
+                        </div>
+                        <div className="home-page__about">
+                            <About/>
+                        </div>
+                        <Map />
+                        <div className="footer-container">
+                            <Footer/>
+                        </div>
                     </div>
-                </div>
-                <div className="home-page__about">
-                    <About/>
-                </div>
-                <Map />
-                <div className="footer-container">
-                    <Footer/>
-                </div>
-            </div>
-        )
-    }
+                )
+            }
 
-}
+        }

@@ -36,9 +36,7 @@ const CartTable = ({items, deleteFromCart, RestoService, onIncreaseQuantityClick
                             </div>
 
                         )
-
                     })
-
                 }
 
             </div>
@@ -48,7 +46,6 @@ const CartTable = ({items, deleteFromCart, RestoService, onIncreaseQuantityClick
             }} className="order">Order
                 </button>
             </Link>
-
         </>
     );
 };

@@ -2,11 +2,11 @@ import React from 'react';
 import cartIcon from './shopping-cart-solid.svg';
 import './app-header.scss';
 import {Link} from "react-router-dom";
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
+
 const AppHeader = ({totalPrice}) => {
     return (
         <header className="header">
-
             <Link className='header__logo header__link' to='/'>
                 <img src='/images/lol.png' alt=""/>
             </Link>
@@ -18,7 +18,6 @@ const AppHeader = ({totalPrice}) => {
                 Total: {totalPrice} $
             </Link>
             </div>
-
         </header>
     )
 };

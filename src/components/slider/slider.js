@@ -22,8 +22,6 @@ export default class Slider extends Component{
                                     <div className="slider-page__image-container">
                                         <img src={item} className="slider-page__image" alt=""/>
                                     </div>
-                                    <div className="slider-page__title">Welcome to Bigoli</div>
-
                                 </div>
                             )
                         })

@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import {changeCategory} from "../../actions";
 
 class FilterCategory extends Component {
-
     categories = [
         'BREAKFAST',
         'MAIN DISHES',
@@ -15,8 +14,6 @@ class FilterCategory extends Component {
     ];
 
     render() {
-
-
         return (
             <div className='filter-container'>
                 {
