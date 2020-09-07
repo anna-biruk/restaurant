@@ -18,7 +18,7 @@ import Map from "../map";
                         <Slider/>
 
                         <div className='home-page__posts'>
-                            <Post img='images/chick.jpg' alt='img' title='Chicken' content='LoremIpsum'/>
+                            <Post img='images/fondan.jpg' alt='img' title='Chocolate fondan' content='LoremIpsum'/>
                             <div className='home-page_post-container'>
                                 <Post className="home-page__post" img='menu/salads/6.jpg' alt='img'
                                       title='Cesar Salad' content=''/>
@@ -30,9 +30,7 @@ import Map from "../map";
                             <About/>
                         </div>
                         <Map />
-                        <div className="footer-container">
                             <Footer/>
-                        </div>
                     </div>
                 )
             }

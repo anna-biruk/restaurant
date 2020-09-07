@@ -21,6 +21,7 @@
     &__item {
         position: relative;
         display: flex;
+      min-width: 420px;
         justify-content: space-between;
         align-items: center;
         margin-top: 40px;
@@ -82,4 +83,13 @@
   border-radius: 35px;
   display: block;
   margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .cart__item-img{
+
+    display: none;
+  }
+  .cart__item{
+    min-width: 263px;
+  }
 }

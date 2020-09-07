@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 export default class Footer extends Component {
     render() {
         return (
-            <footer>
+            <footer className='footer-container'>
                 <div className="footer">
                     <span className="footer__title"> Terms and condisions </span>
                     <span className="footer__title">Privacy</span>

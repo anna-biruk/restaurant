@@ -80,7 +80,7 @@ const OrderForm = ({orders, saveOrder}) => {
                 </Select>
             </Form.Item>
             <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="checkout">
+                <Button type="primary" htmlType="checkout" onSubmit='Hello world'>
                     Checkout
                 </Button>
                 <Link to='/menu'> <Button htmlType="button">

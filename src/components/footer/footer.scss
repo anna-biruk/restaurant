@@ -2,7 +2,8 @@
   background-color:rgb(240,240,240);
   padding-top: 30px;
   padding-bottom: 20px;
-  margin-top: 115px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer {
   width: 900px;

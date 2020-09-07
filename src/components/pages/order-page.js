@@ -6,12 +6,14 @@ import Footer from "../footer";
 
 const OrderPage = () => {
     return (
+        <>
        <div className="order-page">
            <AppHeader/>
            <OrderForm/>
-           <Footer/>
        </div>
-    )
+            <Footer/>
+
+        </>    )
 };
 
 export default OrderPage;

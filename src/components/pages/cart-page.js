@@ -5,12 +5,15 @@ import Footer from "../footer";
 
     const CartPage = () => {
         return (
+            <>
             <div className="cart">
                 <AppHeader/>
                 <CartTable/>
-                <Footer/>
             </div>
-        )
+                <Footer/>
+
+            </>
+                   )
     };
 
 export default CartPage;

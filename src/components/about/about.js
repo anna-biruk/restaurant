@@ -5,7 +5,11 @@ export default class About extends Component {
     render() {
         return (
             <div className="about-page">
-                <img className='about-page__image' src="images/restjpg.jpg" alt="rest"/>
+                <div className="about-page__image-container">
+                    <img className='about-page__image' src="images/restjpg.jpg" alt="rest"/>
+                    <img className='about-page__image' src="images/rest2.jpg" alt="rest"/>
+                    <img className='about-page__image' src="images/rest3.jpeg" alt="rest"/>
+                </div>
                 <div className="about-page__descr">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.

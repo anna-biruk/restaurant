@@ -18,7 +18,7 @@ export default class Slider extends Component{
                     {
                         images.map(item => {
                             return (
-                                <div className="each-fade">
+                                <div key={item} className="each-fade">
                                     <div className="slider-page__image-container">
                                         <img src={item} className="slider-page__image" alt=""/>
                                     </div>
