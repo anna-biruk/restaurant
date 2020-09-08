@@ -2,6 +2,7 @@ import React from 'react';
 import {Route, Switch} from "react-router-dom";
 import {MainPage, CartPage, HomePage, OrderPage} from '../pages';
 import 'antd/dist/antd.css';
+import CheckoutModal from '../checkoutModal';
 
         const App = () => {
 
@@ -21,6 +22,7 @@ import 'antd/dist/antd.css';
                             <HomePage/>
                         </Route>
                     </Switch>
+                    <CheckoutModal />
                 </div>
             )
         };

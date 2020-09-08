@@ -1,3 +1,5 @@
+import {show} from 'redux-modal';
+
 const menuLoaded = (newMenu) => {
     return {
         type: "MENU_LOADED",
@@ -46,11 +48,19 @@ const onDecreaseQuantityClicked=(id)=>{
     }
 };
 const saveOrder=(data)=>{
-    return{
-        type:"SAVE_ORDER",
-        payload:data
+    return (dispatch) => {
+        dispatch({type: "SAVE_ORDER", payload: data});
+        dispatch(show('checkoutModal'));
+
+    }
+
+};
+const checkout = () => {
+    return (dispatch) => {
+        dispatch(show('checkoutModal'));
     }
 };
+
 export {
     menuLoaded,
     menuRequested,
@@ -60,5 +70,5 @@ export {
     changeCategory,
     onDecreaseQuantityClicked,
     onIncreaseQuantityClicked,
-    saveOrder
+    saveOrder, checkout
 };

@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
 
 const AppHeader = ({totalPrice}) => {
+
     return (
         <header className="header">
             <Link className='header__logo header__link' to='/'>
@@ -21,9 +22,9 @@ const AppHeader = ({totalPrice}) => {
         </header>
     )
 };
-const mapStateToProps = ({totalPrice}) => {
+const mapStateToProps = (state) => {
     return{
-        totalPrice
+        totalPrice:state.menuReducer.totalPrice
     }
 };
 

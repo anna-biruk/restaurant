@@ -53,10 +53,10 @@ class MenuList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        menuItems: state.menu,
-        loading: state.loading,
-        error: state.error,
-        category: state.category
+        menuItems: state.menuReducer.menu,
+        loading: state.menuReducer.loading,
+        error: state.menuReducer.error,
+        category: state.menuReducer.category
     }
 };
 const mapDispatchToProps = {

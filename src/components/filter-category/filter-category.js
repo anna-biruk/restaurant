@@ -34,11 +34,13 @@ class FilterCategory extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        category: state.category,
+        category: state.menuReducer.category,
+
     }
 };
 const mapDispatchToProps = {
-    changeCategory
+    changeCategory,
+
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterCategory);

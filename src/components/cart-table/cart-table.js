@@ -60,8 +60,8 @@ const generateOrder = (items) => {
 };
 const mapStateToProps = (state) => {
     return {
-        items: state.items,
-        id:state.id
+        items: state.menuReducer.items,
+        id:state.menuReducer.id
     }
 };
 const mapDispatchToProps = {

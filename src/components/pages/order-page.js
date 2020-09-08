@@ -10,8 +10,10 @@ const OrderPage = () => {
        <div className="order-page">
            <AppHeader/>
            <OrderForm/>
+           <Footer/>
+
        </div>
-            <Footer/>
+
 
         </>    )
 };
