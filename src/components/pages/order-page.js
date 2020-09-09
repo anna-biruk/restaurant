@@ -6,7 +6,6 @@ import Footer from "../footer";
 
 const OrderPage = () => {
     return (
-        <>
        <div className="order-page">
            <AppHeader/>
            <OrderForm/>
@@ -15,7 +14,7 @@ const OrderPage = () => {
        </div>
 
 
-        </>    )
+    )
 };
 
 export default OrderPage;

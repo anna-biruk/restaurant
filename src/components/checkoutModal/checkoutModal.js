@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Modal} from 'antd';
 import {connectModal} from "redux-modal";
+import {connect} from "react-redux";
+import './checkoutModal.scss'
 
-class CheckoutModal extends Component {
+const CheckoutModal = ({totalPrice,show,handleHide,order}) => {
 
 
-    render() {
-        const {show, handleHide} = this.props;
 
         return (
             <Modal
@@ -14,15 +14,29 @@ class CheckoutModal extends Component {
                 visible={show}
                 onOk={handleHide}
                 onCancel={handleHide}
-
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <div className="modal-content">
+                    <b className='modal-title'>Please confirm your order details:</b>
+                    <p className='modal-item_bold'>{order.name}</p>
+                    <p className='modal-item_bold'> {order.address}</p>
+                    <p className='modal-item_bold'>{order.prefix}{order.phone}</p>
+                    <p className='modal-item_bold'>Total price: {totalPrice} $</p>
+
+                    <p className='modal-item'>{order.email}</p>
+                    <p className='modal-item'>Payment method: {order.payment}</p>
+
+
+                </div>
+
             </Modal>
         )
+};
+
+const mapStateToProps = (state) => {
+    return {
+        totalPrice: state.menuReducer.totalPrice,
+        order: state.menuReducer.order
     }
+};
 
-}
-
-export default connectModal({name: 'checkoutModal'})(CheckoutModal)
+export default connect(mapStateToProps)(connectModal({name: 'checkoutModal'})(CheckoutModal))

@@ -33,9 +33,11 @@ const OrderForm = ({order, saveOrder}) => {
     };
 
     const prefixSelector = (
-        <Form.Item name="prefix" noStyle>
-            <Select style={{width: 100}}>
+        <Form.Item name="prefix" noStyle >
+            <Select defaultValue="+375" style={{width: 100}} >
                 <Option value="+375">+375</Option>
+                <Option value="+1">+1</Option>
+                <Option value="+7">+7</Option>
             </Select>
         </Form.Item>
     );
