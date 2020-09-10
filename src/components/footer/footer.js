@@ -10,7 +10,7 @@ export default class Footer extends Component {
             <footer className='footer-container'>
                 <div className="footer">
                     <Link to='/'> <span className="footer__title">About Bigoli</span></Link>
-                    <span className="footer__title">Number: +375291234567</span>
+                    <span className="footer__title">Contact: +17421234567, bigoli@gmail.com</span>
                     <span className="footer__follow">Follow</span>
                     <Link to='/'><FontAwesomeIcon className='footer__icon' icon={faInstagramSquare}/></Link>
                     <Link  to='/'> <FontAwesomeIcon className='footer__icon' icon={faFacebook}/> </Link>

@@ -23,13 +23,14 @@ const CartTable = ({items, deleteFromCart, RestoService, onIncreaseQuantityClick
                                 <img src={url} className="cart__item-img" alt={''} />
                                 <div className="cart__item-title">{title}</div>
                                 <div className="cart__item-price">{price}$ * {qtty}</div>
-                               <FontAwesomeIcon onClick={()=>{
-                                   onIncreaseQuantityClicked(id)
-                               }} className='cart__up' icon={faChevronUp}/>
-                               <FontAwesomeIcon onClick={()=>{
-                                   onDecreaseQuantityClicked(id)
-                               }} className='cart__down' icon={faChevronDown}/>
-
+                                <div className='cart__upDown'>
+                                    <FontAwesomeIcon onClick={()=>{
+                                        onIncreaseQuantityClicked(id)
+                                    }} className='cart__up' icon={faChevronUp}/>
+                                    <FontAwesomeIcon onClick={()=>{
+                                        onDecreaseQuantityClicked(id)
+                                    }} className='cart__down' icon={faChevronDown}/>
+                                </div>
                                 <div onClick={() => {
                                     deleteFromCart(id)
                                 }} className="cart__close">&times;</div>

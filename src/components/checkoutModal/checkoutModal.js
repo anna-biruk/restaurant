@@ -5,9 +5,6 @@ import {connect} from "react-redux";
 import './checkoutModal.scss'
 
 const CheckoutModal = ({totalPrice,show,handleHide,order}) => {
-
-
-
         return (
             <Modal
                 title="Your order has been completed!"
@@ -21,11 +18,8 @@ const CheckoutModal = ({totalPrice,show,handleHide,order}) => {
                     <p className='modal-item_bold'> {order.address}</p>
                     <p className='modal-item_bold'>{order.prefix}{order.phone}</p>
                     <p className='modal-item_bold'>Total price: {totalPrice} $</p>
-
                     <p className='modal-item'>{order.email}</p>
                     <p className='modal-item'>Payment method: {order.payment}</p>
-
-
                 </div>
 
             </Modal>
