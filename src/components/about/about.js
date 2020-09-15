@@ -11,13 +11,11 @@ export default class About extends Component {
                     <img className='about-page__image' src="images/rest3.jpeg" alt="rest"/>
                 </div>
                 <div className="about-page__descr">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Bigoli is a classic restaurant with excellent service, cozy interior and intimate atmosphere.
+                    The menu contains simple and understandable dishes of European cuisine.This is the place where taste
+                    is born, where gastronomic fashion is set, where every dinner turns into an unforgettable event.
+                    Bigoli has everything to make your gastronomic dreams come true and give a unique time and vivid
+                    emotions in a special atmosphere.
                 </div>
             </div>
         )
