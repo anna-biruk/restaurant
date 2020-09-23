@@ -109,7 +109,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps =(dispatch)=> {
     return{
         saveOrder:(data)=>dispatch(saveOrder(data)),
-        checkout:()=>dispatch(checkout())
 
     }
 };

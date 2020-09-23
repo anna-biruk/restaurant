@@ -3,17 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "latest",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "antd": "^4.6.2",
+    "antd-img-crop": "^3.10.0",
+    "body-parser": "^1.19.0",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
+    "cryptr": "^6.0.2",
     "express": "^4.17.1",
     "mdbreact": "^4.27.0",
     "node-sass": "^4.12.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -25,7 +31,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-modal": "^4.0.0",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.3.5"
   },
   "scripts": {
     "heroku-postbuild": "npm run build && cd ./server && npm i",

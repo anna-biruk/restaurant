@@ -1,9 +1,16 @@
-const menuService=require('../services/menuService');
+const menuService = require('../services/menuService');
 
 class MenuController {
-    getAll(req, res) {
-        const menuItems = menuService.getAll();
+    async getAll(req, res) {
+        const {limit = 10, offset = 0, search = ''} = req.query;
+        const menuItems = await menuService.getAll(limit, offset, search);
         res.json(menuItems);
+    }
+
+    async createMenu(req, res) {
+        const {title, price, category, url} = req.body;
+        const newMenuItem = await menuService.createMenu({title, price, category, url});
+        res.json(newMenuItem);
     }
 }
 

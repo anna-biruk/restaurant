@@ -3,9 +3,9 @@ const initialState = {
     category: null,
     loading: false,
     error: false,
-    items:[],
+    items: [],
     totalPrice: 0,
-    order:null
+    order: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,9 +30,9 @@ const reducer = (state = initialState, action) => {
                 error: true
             };
         case 'ITEM_ADD_TO_CART':
-            const id=action.payload;
+            const id = action.payload;
             const itemInd = state.items.findIndex(item => item.id === id);
-            if (itemInd >= 0){
+            if (itemInd >= 0) {
                 const itemInState = state.items.find(item => item.id === id);
                 const newItem = {
                     ...itemInState,
@@ -122,9 +122,14 @@ const reducer = (state = initialState, action) => {
         case "SAVE_ORDER":
             return {
                 ...state,
-                order:action.payload
+                order: action.payload
             };
 
+        case "SAVE_MENUITEM":
+            return {
+                ...state,
+                menu: [...state.menu, action.payload]
+            };
 
         default:
             return state;

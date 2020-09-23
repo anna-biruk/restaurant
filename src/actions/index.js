@@ -1,4 +1,7 @@
 import {show} from 'redux-modal';
+import RestoService from "../services/resto-service";
+
+const restoService = new RestoService();
 
 const menuLoaded = (newMenu) => {
     return {
@@ -34,20 +37,20 @@ const changeCategory = (category) => {
         payload: category
     }
 };
-const onIncreaseQuantityClicked=(id)=>{
-    return{
-        type:'INCREASE_QUANTITY',
-        payload:id
+const onIncreaseQuantityClicked = (id) => {
+    return {
+        type: 'INCREASE_QUANTITY',
+        payload: id
     }
 };
 
-const onDecreaseQuantityClicked=(id)=>{
-    return{
+const onDecreaseQuantityClicked = (id) => {
+    return {
         type: 'DECREASE_QUANTITY',
-        payload:id
+        payload: id
     }
 };
-const saveOrder=(data)=>{
+const saveOrder = (data) => {
     return (dispatch) => {
         dispatch({type: "SAVE_ORDER", payload: data});
         dispatch(show('checkoutModal'));
@@ -60,6 +63,32 @@ const checkout = () => {
         dispatch(show('checkoutModal'));
     }
 };
+const saveMenuItem = (data) => {
+    return async (dispatch) => {
+        const result = await restoService.createMenu(data);
+        dispatch({type: 'SAVE_MENUITEM', payload: result})
+    }
+};
+
+const saveOrderToDB = () => {
+    return async (dispatch, getState) => {
+        const {menuReducer: {order, items, totalPrice}} = getState();
+        const newOrder = {
+            name: order.name,
+            prefix: order.prefix,
+            phone: order.phone,
+            email: order.email,
+            address: order.address,
+            note: order.user.Note,
+            payment: order.payment,
+            menuItems: items,
+            totalPrice: totalPrice
+        };
+        const result = await restoService.createOrder(newOrder);
+        console.log({...result})
+        //dispatch({type:"SAVE_ORDER", payload:data});
+    }
+};
 
 export {
     menuLoaded,
@@ -70,5 +99,5 @@ export {
     changeCategory,
     onDecreaseQuantityClicked,
     onIncreaseQuantityClicked,
-    saveOrder, checkout
+    saveOrder, checkout, saveOrderToDB, saveMenuItem
 };

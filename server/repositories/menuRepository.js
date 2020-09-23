@@ -1,9 +1,35 @@
-const menu =require('../constants/menu');
+const Menu = require('../../database/models/menu.models');
+const {Op} = require("sequelize");
 
 
 class MenuRepository {
-    getAll() {
+    async getAll(limit, offset, search) {
+        let options = {
+            raw: true, limit: limit, offset: offset, where: {}
+        };
+
+        if (search) {
+            options.where[Op.or] = [
+                {
+                    title: {
+                        [Op.like]: `%${search}%`
+                    }
+                },
+                {
+                    category: {
+                        [Op.like]: `%${search}%`
+                    }
+                }
+            ]
+        }
+
+        const menu = await Menu.findAll(options);
         return menu;
+    }
+
+    async createMenu(menuItem) {
+        const newMenuItem = await Menu.create(menuItem, {raw: true});
+        return newMenuItem;
     }
 }
 

@@ -11,7 +11,6 @@ import FilterCategory from "../filter-category";
 class MenuList extends Component {
     componentDidMount() {
         this.props.menuRequested();
-
         const {RestoService} = this.props;
         RestoService.getMenuItems()
             .then(res => this.props.menuLoaded(res)).catch((error) => {
@@ -21,16 +20,15 @@ class MenuList extends Component {
     }
 
     render() {
-        const {menuItems, loading, error, addedToCart, category} = this.props;
+        const {menuItems, loading, error, addedToCart, category, isAdmin, onEditClick} = this.props;
         if (loading) {
             return <Spinner/>
         }
-
         if (error) {
             console.error(error);
             return <Error/>
         }
-        const filterItems = menuItems.filter(item => category === null || category === item.category.toUpperCase())
+        const filterItems = menuItems.filter(item => category === null || category === item.category.toUpperCase());
         return (
             <div>
                 <div className='menu-list__title'>Our menu</div>
@@ -38,6 +36,8 @@ class MenuList extends Component {
                 <ul className="menu__list">
                     {filterItems.map(menuItem => {
                         return <MenuListItem
+                            isAdmin={isAdmin}
+                            onEditClick={onEditClick}
                             key={menuItem.id}
                             menuItem={menuItem}
                             onAddToCart={() => {

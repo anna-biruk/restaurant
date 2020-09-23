@@ -1,0 +1,12 @@
+.adminLogin-container {
+  height: 100vh;
+  &__form {
+    width: 400px;
+    display: block;
+
+  }
+}
+
+.adminLogin-container__form.ant-form {
+  margin: 0 auto;
+}
