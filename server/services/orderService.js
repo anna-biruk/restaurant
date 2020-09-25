@@ -11,6 +11,11 @@ class OrderService {
         const orderItem = await orderRepositories.getAll(limit,offset,search);
         return orderItem;
     }
+    async updateStatus(statusItem){
+        const newStatusItem=await orderRepositories.updateStatus(statusItem);
+        return newStatusItem;
+
+    }
 
 }
 

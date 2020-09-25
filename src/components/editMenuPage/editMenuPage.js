@@ -1,11 +1,12 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
-import CreateMenu from "../createMenu/createMenu";
+import {useHistory, useParams} from 'react-router-dom';
 import {Menu, PageHeader} from "antd";
+import EditMenu from "../editMenu/editMenu";
 
 
 const EditMenuPage = () => {
     const history = useHistory();
+    const params = useParams();
     const navigateToMenu = () => {
         history.push('/admin/menu')
     };
@@ -32,7 +33,7 @@ const EditMenuPage = () => {
                         </Menu.Item>
                     </Menu>}
             />
-            <CreateMenu/>
+            <EditMenu itemId={Number.parseInt(params.id)}/>
         </div>
     )
 };

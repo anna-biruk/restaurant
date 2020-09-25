@@ -31,6 +31,11 @@ class MenuRepository {
         const newMenuItem = await Menu.create(menuItem, {raw: true});
         return newMenuItem;
     }
+
+    async updateMenuItem(menuItem) {
+        const newUpdateMenuItem = await Menu.update(menuItem, { where: {id: menuItem.id}, raw: true});
+        return newUpdateMenuItem;
+    }
 }
 
 module.exports = new MenuRepository();

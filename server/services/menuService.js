@@ -10,7 +10,11 @@ class MenuService {
     async createMenu(menuItem){
        const newMenuItem= await menuRepository.createMenu(menuItem);
        return newMenuItem;
+    }
 
+    async updateMenuItem(menuItem){
+       const newMenuItem=await menuRepository.updateMenuItem(menuItem);
+       return newMenuItem;
     }
 }
 

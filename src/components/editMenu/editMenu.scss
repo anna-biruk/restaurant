@@ -1,0 +1,16 @@
+.editMenu {
+  &__button {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  &__upload{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__center {
+    margin: 0 auto;
+  }
+}

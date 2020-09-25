@@ -1,12 +1,12 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import {Menu, PageHeader,Tabs} from 'antd';
-import './adminMenu.scss'
+import {Menu, PageHeader, Tabs} from 'antd';
 import CreateMenu from "../createMenu";
 import RedactMenu from "../redactMenu";
 
-const { TabPane } = Tabs;
+import './adminMenu.scss';
 
+const {TabPane} = Tabs;
 
 const AdminMenu = () => {
     const history = useHistory();
@@ -19,7 +19,7 @@ const AdminMenu = () => {
     return (
         <>
             <PageHeader
-                className="site-page-header"
+                className="admin-menu__header"
                 onBack={navigateToOrders}
                 title="Admin Panel"
                 subTitle={
@@ -36,7 +36,7 @@ const AdminMenu = () => {
                         </Menu.Item>
                     </Menu>}
             />
-            <div>
+            <div className="admin-menu__tabs">
                 <Tabs defaultActiveKey="1">
                     <TabPane tab="Create" key="1">
                         <CreateMenu/>

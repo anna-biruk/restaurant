@@ -4,9 +4,16 @@ import RestoService from "../services/resto-service";
 const restoService = new RestoService();
 
 const menuLoaded = (newMenu) => {
+
+    const mappedMenu = newMenu.map(item => {
+        return {
+            ...item,
+            price: parseFloat(item.price)
+        }
+    });
     return {
         type: "MENU_LOADED",
-        payload: newMenu
+        payload: mappedMenu
     }
 };
 const menuRequested = () => {
@@ -65,11 +72,35 @@ const checkout = () => {
 };
 const saveMenuItem = (data) => {
     return async (dispatch) => {
-        const result = await restoService.createMenu(data);
-        dispatch({type: 'SAVE_MENUITEM', payload: result})
+        try {
+            const result = await restoService.createMenu(data);
+            dispatch({type: 'SAVE_MENUITEM', payload: result});
+            dispatch({type: 'CREATE_FORM_SUCCESS', payload: {success: true}});
+        } catch (e) {
+            dispatch({type: 'CREATE_FORM_ERROR', payload: e});
+        }
+    }
+};
+const updateMenuItem = (data) => {
+    return async (dispatch) => {
+        try {
+            const result = await restoService.updateMenu(data);
+            dispatch({type: 'EDIT_FORM_SUCCESS', payload: {success: true}});
+            console.log(result);
+        } catch (e) {
+            dispatch({type: 'EDIT_FORM_ERROR', payload: e});
+        }
+
     }
 };
 
+const clearCreateForm = () => (dispatch) => {
+    dispatch({type: "CLEAR_CREATE_FORM"})
+};
+
+const clearEditForm = () => (dispatch) => {
+    dispatch({type: "CLEAR_EDIT_FORM"})
+};
 const saveOrderToDB = () => {
     return async (dispatch, getState) => {
         const {menuReducer: {order, items, totalPrice}} = getState();
@@ -86,7 +117,7 @@ const saveOrderToDB = () => {
         };
         const result = await restoService.createOrder(newOrder);
         console.log({...result})
-        //dispatch({type:"SAVE_ORDER", payload:data});
+        dispatch({type:"SAVE_ORDER", payload:result});
     }
 };
 
@@ -99,5 +130,8 @@ export {
     changeCategory,
     onDecreaseQuantityClicked,
     onIncreaseQuantityClicked,
-    saveOrder, checkout, saveOrderToDB, saveMenuItem
+    saveOrder, checkout, saveOrderToDB,
+    saveMenuItem,
+    updateMenuItem, clearCreateForm,
+    clearEditForm
 };

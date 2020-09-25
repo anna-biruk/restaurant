@@ -12,6 +12,12 @@ class MenuController {
         const newMenuItem = await menuService.createMenu({title, price, category, url});
         res.json(newMenuItem);
     }
+
+    async updateMenuItem(req, res) {
+        const {title, price, category, url, id} = req.body;
+        const newMenuItem = await menuService.updateMenuItem({title, price, category, url, id});
+        res.json(newMenuItem);
+    }
 }
 
 module.exports = new MenuController();

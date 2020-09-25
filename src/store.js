@@ -10,7 +10,7 @@ const persistConfig = {
     key: 'somekey',
     storage,
     whiteList: ['menuReducer'],
-    blackList: ['modal'],
+    blacklist: ['modal', 'createForm','editForm'],
 };
 const persistedReducer = persistReducer(persistConfig, reducer);
 

@@ -33,12 +33,21 @@
 .check-box {
   max-width: 30px;
   margin-right: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .close-box {
   max-width: 30px;
+
+  &:focus {
+    outline: none;
+  }
 }
-.menuItem{
+
+.menuItem {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -48,13 +57,14 @@
   margin: 5px;
 
 
-  &__title{
+  &__title {
     width: 200px;
   }
 
   &__qtty {
     margin-left: 200px;
   }
+
   &__price {
     margin-left: auto;
   }

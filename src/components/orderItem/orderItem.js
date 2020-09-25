@@ -2,17 +2,27 @@ import React, {Component} from 'react';
 import {Collapse} from 'antd';
 import {CaretRightOutlined} from '@ant-design/icons';
 import './orderItem.scss';
+import {updateStatus} from "../../actions/orderActions";
+import {connect} from "react-redux";
 
 const {Panel} = Collapse;
 
 
-export default class OrderItem extends Component {
-    handleButtonClick = (e) => {
+class OrderItem extends Component {
+
+    handleAccept = (e) => {
         e.stopPropagation();
+        const {updateStatus, orderItem: {id}} = this.props;
+        updateStatus({id, status: 'accepted'})
+    };
+    handleDecline = (e) => {
+        e.stopPropagation();
+        const {updateStatus, orderItem: {id}} = this.props;
+        updateStatus({id, status: 'declined'})
     };
 
     render() {
-        const {orderItem: {address, name, email, prefix, phone, payment, totalPrice, status, createdAt, menuItems = []}} = this.props;
+        const {orderItem: {address, name, email, prefix, phone, payment, totalPrice, status, menuItems = []}} = this.props;
         return (
             <>
                 <Collapse
@@ -33,8 +43,10 @@ export default class OrderItem extends Component {
                             }
                             <div>{status}</div>
                             <div>
-                                <input type="image" src='/images/check.png' className='check-box'/>
-                                <input type='image' src='/images/close.png' className='close-box'/>
+                                <input type="image" src='/images/check.png' className='check-box'
+                                       onClick={this.handleAccept}/>
+                                <input type='image' src='/images/close.png' className='close-box'
+                                       onClick={this.handleDecline}/>
 
                             </div>
 
@@ -62,3 +74,10 @@ export default class OrderItem extends Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        updateStatus: (data) => dispatch(updateStatus(data))
+    }
+};
+export default connect(null, mapDispatchToProps)(OrderItem);

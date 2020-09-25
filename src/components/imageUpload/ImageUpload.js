@@ -4,7 +4,6 @@ import ImgCrop from 'antd-img-crop';
 
 const ImageUpload = ({onFileStateChange}) => {
     const [fileList, setFileList] = useState([]);
-
     const getSource = async (file) => {
         let src = file.url;
         if (!src) {

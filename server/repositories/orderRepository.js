@@ -36,6 +36,12 @@ class OrderRepository {
         return order;
     }
 
+    async updateStatus(statusItem) {
+        const newStatusItem = await Order.update(statusItem, {where: {id: statusItem.id}, raw: true});
+        return newStatusItem;
+
+    }
+
 }
 
 module.exports = new OrderRepository();

@@ -39,6 +39,28 @@ export default class RestoService {
     async getOrders() {
         return await this.getResource(`/api/order/?limit=10`)
     }
+    async updateMenu(menuItem){
+        const response = await fetch(`${this._apiBase}/api/menu`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(menuItem)
+        });
+        return await response.json();
+
+    }
+    async updateStatus(statusItem){
+        const response = await fetch(`${this._apiBase}/api/order`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(statusItem)//{id,status}
+        });
+        return await response.json();
+
+    }
 
     async signIn(credentials) {
         const response = await fetch(`${this._apiBase}/session`, {

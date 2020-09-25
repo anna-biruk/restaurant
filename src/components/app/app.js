@@ -6,6 +6,7 @@ import CheckoutModal from '../checkoutModal';
 import AdminPage from "../pages/admin-page";
 import AdminMenu from "../adminMenu";
 import EditMenuPage from "../editMenuPage";
+import OrderStatusPage from "../ordetStatusPage";
 
         const App = () => {
 
@@ -18,9 +19,13 @@ import EditMenuPage from "../editMenuPage";
                         <Route path="/cart">
                             <CartPage/>
                         </Route>
+                        <Route path='/order/:id'>
+                            <OrderStatusPage/>
+                        </Route>
                         <Route path='/order'>
                             <OrderPage/>
                         </Route>
+
                         <Route path='/admin/login'>
                             <LoginPage/>
                         </Route>

@@ -97,3 +97,16 @@
     max-width: 200px;
   }
 }
+
+@media screen and (max-width: 700px){
+  .menu{
+    &__list{
+      padding: 20px;
+
+    }
+    &__item{
+      margin-right: 0px;
+    }
+
+  }
+}

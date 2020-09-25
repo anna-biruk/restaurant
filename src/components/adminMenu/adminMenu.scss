@@ -1,0 +1,10 @@
+.admin-menu {
+  &__header {
+    border: 1px solid rgb(235, 237, 240);
+  }
+
+  &__tabs {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

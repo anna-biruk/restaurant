@@ -38,7 +38,7 @@ const reducer = (state = initialState, action) => {
                     ...itemInState,
                     qtty: ++itemInState.qtty
                 };
-
+                debugger
                 return {
                     ...state,
                     items: [
@@ -46,6 +46,7 @@ const reducer = (state = initialState, action) => {
                         newItem,
                         ...state.items.slice(itemInd + 1)
                     ],
+
                     totalPrice: state.totalPrice + newItem.price
                 }
 
@@ -96,7 +97,6 @@ const reducer = (state = initialState, action) => {
             });
             newItems.forEach(item => {
                 fullPrice += item.price * item.qtty;
-
             });
             return {
                 ...state,
