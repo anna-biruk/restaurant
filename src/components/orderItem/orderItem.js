@@ -20,6 +20,11 @@ class OrderItem extends Component {
         const {updateStatus, orderItem: {id}} = this.props;
         updateStatus({id, status: 'declined'})
     };
+    handleDelivered = (e) => {
+        e.stopPropagation();
+        const {updateStatus, orderItem: {id}} = this.props;
+        updateStatus({id, status: 'delivered'})
+    };
 
     render() {
         const {orderItem: {address, name, email, prefix, phone, payment, totalPrice, status, menuItems = []}} = this.props;
@@ -45,8 +50,11 @@ class OrderItem extends Component {
                             <div>
                                 <input type="image" src='/images/check.png' className='check-box'
                                        onClick={this.handleAccept}/>
+                                <input type='image' src='/images/shipped.png' className='delivery-box'
+                                       onClick={this.handleDelivered}/>
                                 <input type='image' src='/images/close.png' className='close-box'
                                        onClick={this.handleDecline}/>
+
 
                             </div>
 

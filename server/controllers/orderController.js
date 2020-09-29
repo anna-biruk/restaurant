@@ -25,6 +25,12 @@ class OrderController {
         res.json(newOrder);
     }
 
+    async getById(req, res) {
+        const {id} = req.params;
+        const order = await orderService.getById(id);
+        res.json(order);
+    }
+
     async updateStatus(req, res) {
         const {status,id} = req.body;
         const newUpdateStatus = await orderService.updateStatus({status,id});

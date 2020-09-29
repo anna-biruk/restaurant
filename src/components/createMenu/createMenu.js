@@ -68,7 +68,7 @@ const CreateMenu = ({saveMenuItem, clearCreateForm, error, model}) => {
                         <Select.Option value="drinks">Drinks</Select.Option>
                     </Select>
                 </Form.Item>
-                <Form.Item className='createMenu__center'>
+                <Form.Item className="createMenu__center">
                     <ImageUpload onFileStateChange={handleImageChange}/>
                 </Form.Item>
                 <Form.Item className="createMenu__center">

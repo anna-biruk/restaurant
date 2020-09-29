@@ -39,7 +39,12 @@ export default class RestoService {
     async getOrders() {
         return await this.getResource(`/api/order/?limit=10`)
     }
-    async updateMenu(menuItem){
+
+    async getOrderById(id) {
+        return await this.getResource(`/api/order/${id}`);
+    }
+
+    async updateMenu(menuItem) {
         const response = await fetch(`${this._apiBase}/api/menu`, {
             method: 'PUT',
             headers: {
@@ -50,7 +55,8 @@ export default class RestoService {
         return await response.json();
 
     }
-    async updateStatus(statusItem){
+
+    async updateStatus(statusItem) {
         const response = await fetch(`${this._apiBase}/api/order`, {
             method: 'PUT',
             headers: {

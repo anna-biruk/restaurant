@@ -11,6 +11,14 @@ const getOrders = () => {
 
 };
 
+const getOrderById = (id) => {
+    return async (dispatch) => {
+        const result = await restoService.getOrderById(id);
+        dispatch({type: "GET_ORDER_BY_ID", payload: result})
+    }
+
+};
+
 const updateStatus = ({id, status}) => {
     return async (dispatch) => {
         dispatch({type: "UPDATE_ORDER_STATUS", payload: {id, status}});
@@ -21,5 +29,6 @@ const updateStatus = ({id, status}) => {
 };
 export {
     getOrders,
-    updateStatus
+    updateStatus,
+    getOrderById
 }

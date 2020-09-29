@@ -70,9 +70,9 @@ const EditMenu = ({menuItem, updateMenuItem, clearEditForm, model, error}) => {
                         </div> : null
                     }
                 </Form.Item>
-                <Form.Item className='editMenu__button'>
-                    <Button type="primary" htmlType="submit">
-                        Create
+                <Form.Item className='editMenu__center'>
+                    <Button className='editMenu__submit' type="primary"  htmlType="submit">
+                        Edit
                     </Button>
                 </Form.Item>
                 <Form.Item>

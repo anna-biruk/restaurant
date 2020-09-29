@@ -11,6 +11,12 @@ const ordersReducer = (state = initialState, action) => {
                 orders: action.payload
             };
 
+        case "GET_ORDER_BY_ID":
+            return {
+                ...state,
+                orders: [action.payload]
+            };
+
         case "UPDATE_ORDER_STATUS":
             return {
                 ...state,

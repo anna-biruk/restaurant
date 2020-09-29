@@ -27,6 +27,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.1",
     "react-slideshow-image": "^3.1.0",
+    "react-socket-io": "^0.2.5",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-modal": "^4.0.0",

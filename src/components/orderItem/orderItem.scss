@@ -38,7 +38,13 @@
     outline: none;
   }
 }
-
+.delivery-box{
+  max-width: 40px;
+  margin-right: 12px;
+  &:focus {
+    outline: none;
+  }
+}
 .close-box {
   max-width: 30px;
 

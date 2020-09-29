@@ -6,6 +6,10 @@ class OrderRepository {
         const newOrder = Order.create(order, {raw: true});
         return newOrder;
     }
+    async getById(id) {
+        const order = await Order.findOne({where:{id}}, {raw: true});
+        return order;
+    }
 
     async getAll(limit, offset, search) {
         let options = {

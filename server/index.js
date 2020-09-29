@@ -17,6 +17,7 @@ app.put('/api/menu', menuController.updateMenuItem);
 app.post('/api/order', orderController.createOrder);
 app.post('/session', adminController.createSession);
 app.get('/api/order', orderController.getAll);
+app.get('/api/order/:id', orderController.getById);
 app.put('/api/order', orderController.updateStatus);
 
 
