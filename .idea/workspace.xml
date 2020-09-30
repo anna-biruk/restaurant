@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9535f89-951f-4b37-bc92-0478f59b9fcb" name="Default Changelist" comment="Added images">
-      <change afterPath="$PROJECT_DIR$/public/images/bgstatus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bgstatus1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bgstatus2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/shipped.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e9535f89-951f-4b37-bc92-0478f59b9fcb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/repositories/orderRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/repositories/orderRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/services/orderService.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/orderService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/orderActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart-table/cart-table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-table/cart-table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/createMenu/createMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createMenu/createMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/editMenu/editMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editMenu/editMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/editMenu/editMenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editMenu/editMenu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/orderItem/orderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/orderItem/orderItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/orderItem/orderItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/orderItem/orderItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ordetStatusPage/ordetStatusPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ordetStatusPage/ordetStatusPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ordetStatusPage/ordetStatusPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ordetStatusPage/ordetStatusPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/orderReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/orderReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/resto-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/resto-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkoutModal/checkoutModal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkoutModal/checkoutModal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu-list-item/menu-list-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-list-item/menu-list-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/menuReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/menuReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +139,7 @@
       <workItem from="1600753254191" duration="19984000" />
       <workItem from="1600851339858" duration="23477000" />
       <workItem from="1600947181404" duration="9932000" />
-      <workItem from="1601039909143" duration="28128000" />
+      <workItem from="1601039909143" duration="30177000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1593369056012</created>
@@ -322,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601054098773</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added orderStatus page">
+      <created>1601402975059</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1601402975060</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -375,6 +362,7 @@
     <MESSAGE value="implemented admin panel" />
     <MESSAGE value="Updated admin panel" />
     <MESSAGE value="Added images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added images" />
+    <MESSAGE value="added orderStatus page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added orderStatus page" />
   </component>
 </project>

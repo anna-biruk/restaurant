@@ -38,7 +38,6 @@ const reducer = (state = initialState, action) => {
                     ...itemInState,
                     qtty: ++itemInState.qtty
                 };
-                debugger
                 return {
                     ...state,
                     items: [

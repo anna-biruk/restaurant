@@ -16,3 +16,9 @@
   color: dimgrey;
 
 }
+@media (max-width: 768px) {
+  .ant-modal-content{
+    width: 300px;
+  }
+  
+}
